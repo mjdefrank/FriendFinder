@@ -13,7 +13,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
 <!-- Bootstrap FontAwesome CDN-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-<!-- Chosen CSS CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
@@ -21,134 +20,145 @@
 <body>
 
 	<div class="container">
+		<div class="jumbotron">
+			<h1 class=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
+			<hr>
+			<h2 class="">Answer a few simple questions. </h2>
+			<h2 class="">Find the friend with the closest compatibility!</h2>
+			<br>
 
-		<h2>Survey Questions</h2>
-		<hr>
+			<div class="">
+				<a href="/survey.html"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4></button></a>	
+			</div>
+		</div>
+		<div class="col-lg-offset-2 col-lg-8">
+			<form>
+				<div class="form-group">
+					<label for='userName'>Name</label>
+					<input type='text' class='form-control' id='photo' placeholder='Firstname Lastname'>
+				</div>
+				<div class="form-group">
+					<label for='userPhoto'>Link to photo</label>
+					<input type='text' class='form-control' id='photo' placeholder='https://www.linktoyourphoto.com'>
+				</div>
+				
+				<div class='form-group'>
+					<h3><strong>Question 1:</strong></h3>
+					<label for='q1'>I enjoy cooking at home vs trying a new restaurant.</label>
+					<select data-placeholder="" class="form-control" id="q1">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+				</div>	
 
-		<h3><strong>About You</strong></h3>
-		<h4>Name (Required)</h4>
-		<input type="text" name="" id="name" class="form-control" required >
-
-		<h4>Link to Photo Image (Required)</h4>
-		<input type="text" name="" id="photo" class="form-control" required >
-
-		<hr>
-
-		<h3><strong>Question 1:</strong></h3>
-		<h4>I enjoy cooking at home vs trying a new restaurant.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q1">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
-		<h3><strong>Question 2</strong></h3>
-		<h4>I'd rather watch a movie I've seen already than see a new film.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q2">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
-
-		<h3><strong>Question 3</strong></h3>
-		<h4>The only way to judge success is to compare yourself to your peers.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q3">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
-
-
-		<h3><strong>Question 4</strong></h3>
-		<h4>You enjoy small talk with coworkers.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q4">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+					<h3><strong>Question 2</strong></h3>
+					<label for='q2'>I'd rather watch a movie I've seen already than see a new film.</label>
+					<select data-placeholder="" class="form-control" id="q2">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
 
 
-		<h3><strong>Question 5</strong></h3>
-		<h4>I'd rather play a sport than watch a sporting event.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q5">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+					<h3><strong>Question 3</strong></h3>
+					<label for='q3'>The only way to judge success is to compare yourself to your peers.</label>
+					<select data-placeholder="" class="form-control" id="q3">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
 
 
-		<h3><strong>Question 6</strong></h3>
-		<h4>Booze is necessary for an epic night out.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q6">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+					<h3><strong>Question 4</strong></h3>
+					<label for='q4'>You enjoy small talk with coworkers.</label>
+					<select data-placeholder="" class="form-control" id="q4">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
 
 
-		<h3><strong>Question 7</strong></h3>
-		<h4>Pepsi is better than Coca-Cola.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q7">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+					<h3><strong>Question 5</strong></h3>
+					<label for='q5'>I'd rather play a sport than watch a sporting event.</label>
+					<select data-placeholder="" class="form-control" id="q5">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
 
-		<h3><strong>Question 8</strong></h3>
-		<h4>Nothing beats a great nap.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q8">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
 
-		<h3><strong>Question 9</strong></h3>
-		<h4>Sweet treats beat out savory snacks every time.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q9">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
+					<h3><strong>Question 6</strong></h3>
+					<label for='q6'>Booze is necessary for an epic night out.</label>
+					<select data-placeholder="" class="form-control" id="q6">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
 
-		<h3><strong>Question 10</strong></h3>
-		<h4>The government is hiding evidence of extra terrestrial visitors.</h4>
-	 	<select data-placeholder="" class="chosen-select" id="q10">
-	 		<option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-      	</select>
 
+					<h3><strong>Question 7</strong></h3>
+					<label for='q7'>Pepsi is better than Coca-Cola.</label>
+					<select data-placeholder="" class="form-control" id="q7">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+
+					<h3><strong>Question 8</strong></h3>
+					<label for='q8'>Nothing beats a great nap.</label>
+					<select data-placeholder="" class="form-control" id="q8">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+
+					<h3><strong>Question 9</strong></h3>
+					<label for='q9'>Sweet treats beat out savory snacks every time.</label>
+					<select data-placeholder="" class="form-control" id="q9">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+
+					<h3><strong>Question 10</strong></h3>
+					<label for='q10'>The government is hiding evidence of extra terrestrial visitors.</label>
+					<select data-placeholder="" class="form-control" id="q10">
+						<option value=""></option>
+						<option value="1">1 (Strongly Disagree)</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5 (Strongly Agree)</option>
+					</select>
+			</form>
 		<br>
 		<br>
 

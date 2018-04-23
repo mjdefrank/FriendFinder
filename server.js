@@ -1,22 +1,22 @@
-//import express, body parser and path per instrcution
+//import functions from routing js files
+const apiRoutes = require('./app/routing/apiRoutes.js');
+const htmlRoutes = require('./app/routing/htmlRoutes.js');
+
+//dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 
-//set up express variable
+//set up express
 var app = express();
-//set port
 var PORT = process.env.PORT || 3000;
  
-//set up bodyParser
+//set middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({type:'application/vnd.api+json'}));
+app.use(bodyParser.urlencoded({extended: false}));
 
-//import functions from routing js files
-require('./app/routing/apiRoutes.js');
-require('./app/routing/htmlRoutes.js');
+apiRoutes(app);
+htmlRoutes(app);
 
 //turn on listener when run in node (port 3000)
 app.listen(3000, function(){
