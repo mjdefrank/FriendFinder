@@ -1,6 +1,6 @@
 const htmlRoutes = function (app) {
 	//Import data from friends.js
-	var friendList = require('../data/friends.js');
+	var friends = require('../data/friends.js');
 
 	//pull data from friends table
 		app.get('/api/friends', function(req, res)
