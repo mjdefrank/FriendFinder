@@ -1,4 +1,4 @@
-module.exports = function (app) => {
+const htmlRoutes = function (app) {
 	//Import data from friends.js
 	var friendList = require('../data/friends.js');
 
@@ -30,3 +30,5 @@ module.exports = function (app) => {
 		});
 		
 	};
+
+	module.exports = htmlRoutes;

@@ -1,8 +1,8 @@
 //use the path module
-var path = require('path');
+const path = require('path');
 
 //exports function to provide HTML pages by route path
-module.exports = function (app) => {
+const htmlRoutes = function (app) {
 	app.get('/', function(req, res){
 		res.sendFile(path.join(__dirname, '../public/home.html'));
 	});
@@ -10,3 +10,5 @@ module.exports = function (app) => {
 		res.sendFile(path.join(__dirname, '../public/survey.html'));
 	});
 };
+
+module.exports = htmlRoutes;
