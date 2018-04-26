@@ -34,8 +34,8 @@
 		<div class="col-lg-offset-2 col-lg-8">
 			<form>
 				<div class="form-group">
-					<label for='userName'>Name</label>
-					<input type='text' class='form-control' id='photo' placeholder='Firstname Lastname'>
+					<label for='name'>Name</label>
+					<input type='text' class='form-control' id='name' placeholder='Firstname Lastname'>
 				</div>
 				<div class="form-group">
 					<label for='userPhoto'>Link to photo</label>
@@ -162,7 +162,7 @@
 		<br>
 		<br>
 
-		<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+		<button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#bestFriendModal" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
  Submit</button>
 
 		<hr>
@@ -179,14 +179,14 @@
 		<div class="modal-dialog" role="document">
 		  <div class="modal-content">
 			<div class="modal-header">
-			  <h5 class="modal-title">Congratulations!</h5>
+			  <!-- <h5 class="modal-title"></h5> -->
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			  </button>
 			</div>
 			<div class="modal-body">
 				<!-- MODAL BODY -->
-			  <p>We've found your nearest match! Your new best friend is:</p>
+			  <p>Congratulations! We've found your nearest match! Your new best friend is:</p>
 			  <br />
 			  <p>Name: <span id="matchName"></span></p>
 			  <img id="matchPhoto" alt="Sorry, no match was provided">
@@ -215,14 +215,14 @@
 				photo: $("#photo").val(),
 				scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
 			};
-			$.post("/api/friends", newProfile, function(data) {
-				console.log('Post to /api/friends complete!');
-			}).done(function(result){
-				$("#matchName").text(result.name);
-				$("#matchPhoto").attr("src", result.photo);
+			// POST request
+			$.post("./api/friends", newProfile, function(data) {
+				$("#matchName").text(data.name);
+				$("#matchPhoto").attr("src", data.photo);
 				$("#bestFriendModal").modal("toggle");
-				console.log(result);
-			});
+				console.log(data);
+			}, 'json');
+		
 		});    
 	</script>
 
