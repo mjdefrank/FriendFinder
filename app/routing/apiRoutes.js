@@ -10,23 +10,29 @@ const htmlRoutes = function (app) {
 		//push info from page into friend array
 		app.post('/api/friends', function(req, res)
 		{
+			//declare an empty score array
 			let scoreArray = [];
+			//create a loop to run through each friends object
 			for (let i=0; i < friends.length; i++) {
+				//declare a compatability var
 				let compatability = 0;
+				//create a loop to run through current friends scores
 				for (let j=0; i<10; j++) {
-					let compareScore = Math.abs(parseInt(friends[i].scores[j]) - parseInt(req.body['scores[]'][j]));
+					//create a compare score var; take absolute value of current friends score, subtract the scores from the body
+					let compareScore = Math.abs(parseInt(friends[i].scores[j]) - parseInt(req.body.scores[j]));
+					//increase compatability by difference
 					compatability += compareScore;
 				}
+				//push compatability into scoreArray
 				scoreArray.push(parseInt(compatability));
 			};
-			console.log(scoreArray);	
-			Array.min = (scoreArray) => {
-				return Math.min.apply( Math, scoreArray);
-			};
-			let closestScore = Array.min(scoreArray);
-			console.log(closestScore)
+			//print entire score array
+			console.log(scoreArray);
+			//	
+			let match = Math.min(scoreArray);
+			console.log(match)
 			friends.push(req.body);
-			res.json(friends[bestMatch]);
+			res.json(friends[match]);
 		});
 		
 	};
