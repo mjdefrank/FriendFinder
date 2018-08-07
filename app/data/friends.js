@@ -1,4 +1,4 @@
-var friends = [
+let friends = [
 	{
 		'name': 'Ron Swanson',
 		'photo': 'https://uproxx.files.wordpress.com/2016/01/ronswanson-bann.jpg?quality=100&w=650',
