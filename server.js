@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 apiRoutes(app);
 htmlRoutes(app);
 
-//turn on listener when run in node (port 3000)
-app.listen(3000, function(){
+//turn on listener when run in node
+app.listen(PORT, function(){
 	console.log('App listening on PORT ' + PORT);
 });
